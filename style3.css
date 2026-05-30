@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: blue;
+    color: white;
+    padding: 30px 20px;
+}
+
+nav {
+    padding: 15px;
+    background: #eee;
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+h2 {
+    margin: 30px 0 10px 0;
+    color: #333;
+}
+
+/* توزيع الكروت بشكل مرن ومتجاوب */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ستايل كارت المنتج وحركته عند الـ Hover */
+.product {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ستايل الصورة وتهيئتها للحركة المعتمدة على الـ Top */
+.product img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease-in-out !important;
+}
+
+/* التأثير المطلوب: رفع الصورة لفوق بسلاسة عند الـ Hover */
+.product:hover img {
+    top: -15px !important;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+    color: #444;
+}
+
+.product p {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* ستايل الأزرار */
+button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* قسم تواصل معنا */
+.contact {
+    margin: 50px auto;
+    width: 320px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.contact input:focus {
+    border-color: blue;
+}
+
+/* الفوتر */
+footer {
+    background: blue;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
