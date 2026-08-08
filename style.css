@@ -41,7 +41,7 @@ h2 {
     color: #333;
 }
 
-/* توزيع الكروت بشكل مرن ومتجاوب */
+
 .products-container {
     display: flex;
     flex-wrap: wrap;
@@ -52,7 +52,7 @@ h2 {
     margin: 0 auto;
 }
 
-/* ستايل كارت المنتج وحركته عند الـ Hover */
+
 .product {
     border: 1px solid #ccc;
     padding: 15px;
@@ -69,7 +69,6 @@ h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* ستايل الصورة وتهيئتها للحركة المعتمدة على الـ Top */
 .product img {
     width: 200px;
     height: 200px;
@@ -80,7 +79,7 @@ h2 {
     transition: top 0.3s ease-in-out !important;
 }
 
-/* التأثير المطلوب: رفع الصورة لفوق بسلاسة عند الـ Hover */
+
 .product:hover img {
     top: -15px !important;
 }
@@ -97,7 +96,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* ستايل الأزرار */
+
 button {
     background: blue;
     color: white;
@@ -117,7 +116,7 @@ button:active {
     transform: scale(0.95);
 }
 
-/* قسم تواصل معنا */
+
 .contact {
     margin: 50px auto;
     width: 320px;
@@ -140,7 +139,7 @@ button:active {
     border-color: blue;
 }
 
-/* الفوتر */
+
 footer {
     background: blue;
     color: white;
