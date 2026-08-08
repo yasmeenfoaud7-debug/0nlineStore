@@ -1,148 +1,185 @@
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    margin: 0;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    direction: rtl;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
 }
+
 
 header {
-    background: blue;
-    color: white;
-    padding: 30px 20px;
-}
-
-nav {
-    padding: 15px;
-    background: #eee;
-}
-
-nav a {
-    text-decoration: none;
-    color: blue;
-    font-size: 20px;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: darkblue;
-    text-decoration: underline;
-}
-
-h2 {
-    margin: 30px 0 10px 0;
-    color: #333;
-}
-
-
-.products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-.product {
-    border: 1px solid #ccc;
-    padding: 15px;
-    width: 250px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
-}
-
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.product img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    position: relative;
-    top: 0;
-    transition: top 0.3s ease-in-out !important;
-}
-
-
-.product:hover img {
-    top: -15px !important;
-}
-
-.product h3 {
-    font-size: 18px;
-    margin: 10px 0 5px 0;
-    color: #444;
-}
-
-.product p {
-    font-weight: bold;
-    color: #666;
+    padding: 20px 0;
+    background-color: #0d50bb;
+    color: white;
+    border-radius: 8px;
     margin-bottom: 15px;
 }
 
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
 
-button {
-    background: blue;
+nav {
+    text-align: center;
+    margin: 15px 0;
+}
+
+nav a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 20px 0;
+}
+
+
+section {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 10px;
+    
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+
+section h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 22px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+
+section br {
+    display: none;
+}
+
+
+section > div {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+section > div img {
+
+    width: 100% !important
+    
+    
+   
+    max-width: 180px;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+section > div h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #0f172a;
+}
+
+section > div p {
+    font-size: 14px;
+    color: #16a34a;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+section > div button {
+    background-color: #2563eb;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
+    border-radius: 6px;
     cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background 0.2s, transform 0.1s;
+    font-size: 14px;
+    width: 100%;
 }
 
-button:hover {
-    background: darkblue;
-}
-
-button:active {
-    transform: scale(0.95);
+section > div button:hover {
+    background-color: #1d4ed8;
 }
 
 
 .contact {
-    margin: 50px auto;
-    width: 320px;
+    max-width: 400px;
+    margin: 30px auto;
     background: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .contact input {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.contact input:focus {
-    border-color: blue;
+.contact button {
+    padding: 8px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.contact button[type="submit"] {
+    background-color: #16a34a;
+    color: white;
+}
+
+.contact button[type="reset"] {
+    background-color: #dc2626;
+    color: white;
+}
 
 footer {
-    background: blue;
-    color: white;
-    padding: 20px;
-    margin-top: 50px;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 20px;
 }
