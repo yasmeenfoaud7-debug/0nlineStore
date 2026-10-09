@@ -1,0 +1,398 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الأناقة - الجزم والشنط</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- الهيدر الموحد لجميع الأقسام -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600">متجر الأناقة</h1>
+            <nav class="hidden md:flex gap-6 font-semibold">
+                <a href="index-men.html" class="hover:text-indigo-600 transition pb-1">رجالي</a>
+                <a href="index-women.html" class="hover:text-indigo-600 transition pb-1">حريمي</a>
+                <a href="index-kids.html" class="hover:text-indigo-600 transition pb-1">أطفال</a>
+                <a href="index-shoes-bags.html" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">الجزم والشنط</a>
+                <a href="#contact" class="hover:text-indigo-600 transition pb-1">تواصل معنا</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <span id="cart-count" class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold">
+                    السلة: 0
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- بانر الهيدر بصورة المتجر -->
+    <section class="relative w-full h-80 overflow-hidden shadow-md">
+        <img src="Y77.jpg" alt="متجر الأناقة" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-3 drop-shadow-md">الجزم والشنط العصرية</h2>
+            <p class="text-gray-200 text-lg drop-shadow">أرقى تشكيلة من الأحذية والحقائب لتكتمل إطلالتك</p>
+        </div>
+    </section>
+
+    <!-- عرض منتجات الجزم والشنط (من D1 إلى D23) -->
+    <main class="container mx-auto px-6 py-12">
+        <h3 class="text-2xl font-bold mb-8 text-indigo-700 border-b pb-2">تشكيلة الأحذية والحقائب</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- منتج D1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D1.jpg" alt="D1" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">كوتش رياضي  رجالي </h4>
+                    <p class="text-gray-600 mb-4 text-sm">جلد طبيعي فاخر للمناسبات والعمل.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">950 ج.م</span>
+                        <button onclick="addToCart('كوتشي رياضي رجالي', 950)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D2.jpg" alt="D2" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">   كوتش رياضي</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تصميم عصري أنيق ومناسب للخروجات.</p>
+                    <div class="flex justify-between items-center">
+<span class="text-indigo-600 font-bold text-lg">650 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D3.jpg" alt="D3" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حذاء رياضي سنيكرز</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مريح جداً للركض والتمارين اليومية.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">700 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D4 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D8.jpg" alt="D4" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حقيبة  عملية  </h4>
+                    <p class="text-gray-600 mb-4 text-sm">متينة ومقاومة للماء للعمل والسفر.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">550 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D5 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D30.jpg" alt="D5" class="w-full h-full object-contain "></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حذاء كعب高 نسائي سهرة</h4>
+                    <p class="text-gray-600 mb-4 text-sm">أناقة راقية تكتمل بها إطلالتك المميزة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">750 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D6 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D13.jpg" alt="D6" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حقيبة كروس صغيرة أنيقة</h4>
+                    <p class="text-gray-600 mb-4 text-sm">خفيفة وعملية للخروجات السريعة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">380 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D7 -->
+<div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D18.jpg" alt="D7" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حذاء شتوي بوت جلد</h4>
+                    <p class="text-gray-600 mb-4 text-sm">دفء كامل وحماية للأيام الباردة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">1100 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D8 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D12.jpg" alt="D8" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حقيبة  جلدية كبيرة</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مساحة واسعة ومتينة للرحلات الطويلة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">1400 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D9 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D22.jpg" alt="D9" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حذاء كاجوال شلايت</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مريح ومناسب للخروجات اليومية الخفيفة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">450 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D10 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D19.jpg" alt="D10" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">   كوتش اطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تتسع لجميع اغراضك اليومية بأناقة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">600 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D11 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D50.jpg" alt="D11" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حذاء رياضي أطفال مريح</h4>
+ <p class="text-gray-600 mb-4 text-sm">مرن وخفيف لحركة آمنة للأطفال.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">350 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D12 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D21.jpg" alt="D12" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">   كوتش انيق</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تصميم أنيق لحفظ الكروت والاموال.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">250 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D13 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D15.jpg" alt="D13" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حقيبة  نسائية أنيقة</h4>
+                    <p class="text-gray-600 mb-4 text-sm">عملية ومنظمة لجميع أدوات العناية.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">300 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D14 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D14.jpg" alt="D14" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حذاء لوفر رجالي أنيق</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مريح وخفيف للخروجات الشبه رسمية.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">680 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D15 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D4.jpg" alt="D15" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حذاء  نسائي </h4>
+                    <p class="text-gray-600 mb-4 text-sm">أناقة ودفء لفصل الشتاء.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">850 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D16.jpg" alt="D16" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">   كوتش نسائي</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مفيدة وخفيفة ومزينة برسومات مبهجة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">340 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D17 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D17.jpg" alt="D17" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حذاء رياضي جرى للرجال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مصمم لامتصاص الصدمات أثناء التمرين.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">820 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D18 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D55.jpg" alt="D18" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">حقيبة   للمصيف</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تضفي لمسة ساحرة على فساتين السهرة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">490 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D19 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D6.jpg" alt="D19" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2"> صندل صيفي نسائي</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مريح وخفيف ومناسب لأيام الصيف.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">400 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D20 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D20.jpg" alt="D20" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2"> كوتش (باني) رياضية</h4>
+ <p class="text-gray-600 mb-4 text-sm">عملية جداً للتمارين والخروج السريع.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">290 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D21 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D21.jpg" alt="D21" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2"> كلاسيكي بناتى أطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">أنيق ورقيق ومناسب للمناسبات للصغار.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">320 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D22 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D22.jpg" alt="D22" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">   كوتش للخروج السريع</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مظهر رسمي واحترافي لرجال الأعمال.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">980 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج D23 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden"><img src="D23.jpg" alt="D23" class="w-full h-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2"> شتوي  أنيق</h4>
+                    <p class="text-gray-600 mb-4 text-sm">دفء كامل وتصميم عصري مميز.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">1050 ج.م</span>
+                        <button onclick="addToCart()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+<!-- قسم تواصل معنا الاحترافي -->
+    <section id="contact" class="container mx-auto px-6 py-12 border-t mt-12">
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+            <h3 class="text-2xl font-bold text-center text-indigo-700 mb-6">تواصل معنا</h3>
+            <form onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً جداً.');" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">الاسم الكريم</label>
+                    <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-600" placeholder="ادخل اسمك">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">رقم الهاتف أو البريد الإلكتروني</label>
+                    <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-600" placeholder="طريقة التواصل معك">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">الرسالة أو الاستفسار</label>
+                    <textarea rows="4" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-600" placeholder="اكتب استفسارك هنا..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-gray-900 text-white py-6 text-center mt-12">
+        <p>جميع الحقوق محفوظة &copy; 2026 - متجر الأناقة</p>
+    </footer>
+
+    
+   <script>
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        function addToCart(productName, price) {
+            cartCount++;
+            cartTotal += price;
+            
+            var cartElement = document.getElementById('cart-count');
+            if (cartElement) {
+                cartElement.innerText = "السلة: " + cartCount + " قطعة (" + cartTotal + " ج.م)";
+            }
+            
+            alert("تم إضافة " + productName + " إلى السلة بنجاح! 🛒");
+        }
+    </script>
+       
+</body>
+</html>

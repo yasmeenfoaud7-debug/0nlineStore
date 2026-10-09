@@ -1,0 +1,387 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الأناقة - قسم الأطفال</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600">متجر الأناقة</h1>
+            <nav class="hidden md:flex gap-6 font-semibold">
+                <a href="index-men.html" class="hover:text-indigo-600 transition pb-1">رجالي</a>
+                <a href="index-women.html" class="hover:text-indigo-600 transition pb-1">حريمي</a>
+                <a href="index-kids.html" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">أطفال</a>
+                <a href="index-shoes-bags.html" class="hover:text-indigo-600 transition pb-1">الجزم والشنط</a>
+                <a href="#contact" class="hover:text-indigo-600 transition pb-1">تواصل معنا</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <span id="cart-count" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-bold shadow-sm">
+                    السلة: 0 قطعة (0 ج.م)
+                </span>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="relative w-full h-80 overflow-hidden shadow-md">
+        <img src="Y77.jpg" alt="متجر الأناقة" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-3 drop-shadow-md">أزياء الأطفال السعيدة</h2>
+            <p class="text-gray-200 text-lg drop-shadow">تشكيلة مبهجة ومريحة لأحدث ملابس الأطفال</p>
+        </div>
+    </section>
+
+    
+    <main class="container mx-auto px-6 py-12">
+        <h3 class="text-2xl font-bold mb-8 text-indigo-700 border-b pb-2">تشكيلة ملابس الأطفال</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S1.jpg" alt="S1" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">طقم أطفال قطني شتوي</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مريح ودافئ ومصمم خصيصاً لبشرة الأطفال.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">350 ج.م</span>
+                        <button onclick="addToCart('طقم أطفال قطني شتوي', 350)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S2.jpg" alt="S2" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">أطفال ملون</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تصميم مبهج وخامات قطنية ناعمة.</p>
+                    <div class="flex justify-between items-center">
+ <span class="text-indigo-600 font-bold text-lg">280 ج.م</span>
+                        <button onclick="addToCart('أطفال ملون', 280)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S3.jpg" alt="S3" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">طقم أطفال مبطن</h4>
+                    <p class="text-gray-600 mb-4 text-sm">حماية كاملة من البرد وأناقة مميزة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">450 ج.م</span>
+                        <button onclick="addToCart('طقم أطفال مبطن', 450)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S4.jpg" alt="S4" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">طقم أطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مقاوم للحركة ومرن ومريح جداً.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">300 ج.م</span>
+                        <button onclick="addToCart('طقم أطفال', 300)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S5.jpg" alt="S5" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">شتوي</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تصميم جميل يناسب المناسبات السعيدة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">500 ج.م</span>
+                        <button onclick="addToCart('شتوي', 500)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S6.jpg" alt="S6" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">بيجامة أطفال قطنية للنوم</h4>
+                    <p class="text-gray-600 mb-4 text-sm">نعومة فائقة لراحة نوم هادئة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">250 ج.م</span>
+                        <button onclick="addToCart('بيجامة أطفال قطنية للنوم', 250)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+ <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S7.jpg" alt="S7" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">تريننج رياضي أطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">عملي ومناسب للأنشطة واللعب.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">380 ج.م</span>
+                        <button onclick="addToCart('تريننج رياضي أطفال', 380)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S8.jpg" alt="S8" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">ترنج أطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">أناقة ودفء لطيف في الشتاء.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">320 ج.م</span>
+                        <button onclick="addToCart('ترنج أطفال', 320)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S9.jpg" alt="S9" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">هودي أطفال كول</h4>
+                    <p class="text-gray-600 mb-4 text-sm">ستايل عصري ودافئ للأطفال.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">340 ج.م</span>
+                        <button onclick="addToCart('هودي أطفال كول', 340)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S10.jpg" alt="S10" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">طقم كاجوال للأولاد</h4>
+                    <p class="text-gray-600 mb-4 text-sm">أناقة مريحة للخروجات العائلية.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">290 ج.م</span>
+                        <button onclick="addToCart('طقم كاجوال للأولاد', 290)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S11.jpg" alt="S11" class="max-h-full max-w-full object-contain"></div>
+ <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">ترنج قطنية</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تصميم رقيق وملون يناسب الصغار.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">260 ج.م</span>
+                        <button onclick="addToCart('ترنج قطنية', 260)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S12.jpg" alt="S12" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">بدلة أطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">إطلالة عملية وجذابة للأطفال.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">390 ج.م</span>
+                        <button onclick="addToCart('بدلة أطفال', 390)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S13.jpg" alt="S13" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">بدله أنيق</h4>
+                    <p class="text-gray-600 mb-4 text-sm">شياكة وراحة متكاملة للصغار.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">420 ج.م</span>
+                        <button onclick="addToCart('بدله أنيق', 420)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S14.jpg" alt="S14" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">بدله للأولاد</h4>
+                    <p class="text-gray-600 mb-4 text-sm">خفيف وعملي للعب بحرية.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">200 ج.م</span>
+                        <button onclick="addToCart('بدله للأولاد', 200)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S15.jpg" alt="S15" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">بدله جميله</h4>
+                    <p class="text-gray-600 mb-4 text-sm">رسومات محببة للأطفال وأقمشة قطنية.</p>
+                    <div class="flex justify-between items-center">
+ <span class="text-indigo-600 font-bold text-lg">500 ج.م</span>
+                        <button onclick="addToCart('بدله جميله', 500)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S16.jpg" alt="S16" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">كارديجان أطفال شتوي</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تصميم رائع يمنح الدفء والأناقة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">360 ج.م</span>
+                        <button onclick="addToCart('كارديجان أطفال شتوي', 360)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S17.jpg" alt="S17" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">طقم للافرع للأطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">مريح للحركة والتمارين اليومية.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">270 ج.م</span>
+                        <button onclick="addToCart('طقم للافرع للأطفال', 270)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S18.jpg" alt="S18" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">فستان مواليد قطن ناعم</h4>
+                    <p class="text-gray-600 mb-4 text-sm">عناية فائقة وأقمشة آمنة للصغار.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">310 ج.م</span>
+                        <button onclick="addToCart('فستان مواليد قطن ناعم', 310)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S19.jpg" alt="S19" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">فستان للأطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">أناقة فائقة وحماية كاملة من البرد.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">550 ج.م</span>
+                        <button onclick="addToCart('فستان للأطفال', 550)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+ <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S20.jpg" alt="S20" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">فستان أطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">خفيف وعملي ومقاوم للرياح.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">460 ج.م</span>
+                        <button onclick="addToCart('فستان أطفال', 460)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S21.jpg" alt="S21" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">طقم أطفال كلاسيك</h4>
+                    <p class="text-gray-600 mb-4 text-sm">إطلالة رسمية جذابة ومميزة للأولاد.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">480 ج.م</span>
+                        <button onclick="addToCart('طقم أطفال كلاسيك', 480)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S22.jpg" alt="S22" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">جاكيت بومبر أطفال</h4>
+                    <p class="text-gray-600 mb-4 text-sm">ستايل عصري وشبابي للأطفال.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">400 ج.م</span>
+                        <button onclick="addToCart('جاكيت بومبر أطفال', 400)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center p-2"><img src="S23.jpg" alt="S23" class="max-h-full max-w-full object-contain"></div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">بدله شبابي</h4>
+                    <p class="text-gray-600 mb-4 text-sm">تصميم دافئ وعصري لأناقة الطفل.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-indigo-600 font-bold text-lg">330 ج.م</span>
+                        <button onclick="addToCart('بدله شبابي', 330)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    
+    <section id="contact" class="container mx-auto px-6 py-12 border-t mt-12">
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+ <h3 class="text-2xl font-bold text-center text-indigo-700 mb-6">تواصل معنا</h3>
+            <form onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً جداً.');" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">الاسم الكريم</label>
+                    <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-600" placeholder="ادخل اسمك">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">رقم الهاتف أو البريد الإلكتروني</label>
+                    <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-600" placeholder="طريقة التواصل معك">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">الرسالة أو الاستفسار</label>
+                    <textarea rows="4" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-600" placeholder="اكتب استفسارك هنا..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <footer class="bg-gray-900 text-white py-6 text-center mt-12">
+        <p>جميع الحقوق محفوظة &copy; 2026 - متجر الأناقة</p>
+    </footer>
+
+    
+    <script>
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        function addToCart(productName, price) {
+            cartCount++;
+            cartTotal += price;
+            
+            var cartElement = document.getElementById('cart-count');
+            if (cartElement) {
+                cartElement.innerText = "السلة: " + cartCount + " قطعة (" + cartTotal + " ج.م)";
+            }
+            
+            alert("تم إضافة " + productName + " إلى السلة بنجاح! 🛒");
+        }
+    </script>
+</body>
+</html>
